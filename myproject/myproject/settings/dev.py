@@ -7,6 +7,8 @@ TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = []
 
+INSTALLED_APPS += ('django_nose',)
+
 SECRET_KEY = environ['SECRET_KEY']
 
 DATABASES = {
