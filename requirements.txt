@@ -22,3 +22,5 @@ twython==3.1.2
 websocket-client==0.32.0
 wsgiref==0.1.2
 beautifulsoup4==4.4.1
+nose==1.3.7
+mock==2.0.0
