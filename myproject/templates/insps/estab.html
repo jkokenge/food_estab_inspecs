@@ -86,7 +86,7 @@
                     tooltip: {
                         enabled: true, 
                         formatter: function() {
-                            return 'Demerits: ' + this.point.y + '<br>' + '<a href="http://45.56.73.117/' + this.point.inspection_key + '/">Click for details.';
+                            return 'Score: ' + this.point.y + '<br>' + '<a href="http://45.56.73.117/' + this.point.inspection_key + '/">Click for details.';
                         },
                         style: {
                             fontFamily: 'Helvetica serif',
@@ -117,7 +117,7 @@
     {% else %}
         <div id="no_estabs">
             <p>
-                This establishment either has no inspections in the database or the demerit total for all inspections is 0. 
+                This establishment has no inspections in the database. 
             </p>
 
         </div>

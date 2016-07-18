@@ -43,13 +43,13 @@ def process_estabs(file):
             date = date_object.strftime('%Y-%m-%d').encode("utf-8")   
             inspec_key_date = re.sub(r'-', '_', date)
             inspection_key = "%s-%s" % (estab_id, inspec_key_date.encode("utf-8") )
-            demerits = re.search(r'Demerits\s\d+', cleaner_bits).group(0).encode("utf-8") 
-            demerits_nums = re.search(r'\d+', demerits).group(0).encode("utf-8") 
+            score = re.search(r'Score\s\d+', cleaner_bits).group(0).encode("utf-8") 
+            score_num = re.search(r'\d+', score).group(0).encode("utf-8") 
             
             inspec.append(estab_id)
             inspec.append(date)
-            inspec.append(demerits)
-            inspec.append(demerits_nums)
+            inspec.append(score)
+            inspec.append(score_num)
             inspec.append(inspection_key)
 
             write_to_csv(inspec, 'inspections_tbl.csv')
