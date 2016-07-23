@@ -43,12 +43,20 @@ def process_estabs(file):
             date = date_object.strftime('%Y-%m-%d').encode("utf-8")   
             inspec_key_date = re.sub(r'-', '_', date)
             inspection_key = "%s-%s" % (estab_id, inspec_key_date.encode("utf-8") )
+            
+            #this was the old way 'Demerits #'
             score = re.search(r'Score\s\d+', cleaner_bits).group(0).encode("utf-8") 
+            
+            #score_num is actually a number
             score_num = re.search(r'\d+', score).group(0).encode("utf-8") 
             
+            demerits = 100 - int(score_num)
+            demerits_text = "Demerits: %d" % demerits
+
+
             inspec.append(estab_id)
             inspec.append(date)
-            inspec.append(score)
+            inspec.append(demerits_text)
             inspec.append(score_num)
             inspec.append(inspection_key)
 

@@ -31,7 +31,9 @@ class Command(BaseCommand):
             ('AVEEEEEEEEEEEEE', 'AVE'), 
             ('ENCIRRRRRRRRRRRRRRRRRRRRNO', 'ENCINO'),
             ('AVEEEE', 'AVE'),
-            ('CHAVEEEEEANEAUX', 'CHAVEANEAUX')
+            ('CHAVEEEEEANEAUX', 'CHAVEANEAUX'), 
+            ('COMMERCIRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRAL', 'COMMERCIAL'),
+            ('AVEE', 'AVE')
         } 
         estabs = GeocodedEstab.objects.all()
         for estab in estabs:
